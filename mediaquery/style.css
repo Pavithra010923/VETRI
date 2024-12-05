@@ -1,0 +1,147 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 735px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+}
+
+/* Navbar Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    padding: 8px 12px;
+    text-transform: uppercase;
+}
+
+/* Hidden checkbox and label for the toggle */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Banner */
+.banner {
+    background-color: #007bff;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.products {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.product-row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.product-col {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Show the toggle button on smaller screens */
+    .nav-toggle-label {
+        display: block;
+    }
+
+    /* When checkbox is checked, show the menu */
+    .nav-toggle:checked + .nav-toggle-label + .nav-links {
+        display: flex;
+    }
+
+    .product-row {
+        flex-direction: column; /* Stack products in one column on small screens */
+    }
+
+    .product-col {
+        margin: 10px 0; /* Add some margin between products */
+    }
+}
+    
+@media (max-width: 480px) {
+    .banner {
+        padding: 50px 0; 
+    }
+}
